@@ -1,7 +1,14 @@
+details:not([open]) .show-less {
+  display: none;
+}
 details[open] .expand-btn__icon,
 details[data-makeup-open] .expand-btn__icon {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+details[open] .show-more,
+details[data-makeup-open] .show-more {
+  display: none;
 }
 summary {
   color: #3665f3;

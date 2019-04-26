@@ -1,9 +1,18 @@
 @import "../../less/ds6/variables.less";
 
+details:not([open]) {
+    .show-less {
+        display: none
+    }
+}
+
 details[open],
 details[data-makeup-open] {
     .expand-btn__icon {
         transform: rotate(180deg);
+    }
+    .show-more {
+        display: none;
     }
 }
 

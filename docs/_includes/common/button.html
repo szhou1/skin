@@ -1,19 +1,25 @@
 <div id="button">
     <h2><span class="secondary-text">@ebay/skin/</span>button</h2>
-    <p>A button is typically used to trigger a JavaScript action (e.g. fetch results, open a dialog or expand a menu). In this case, the <span class="highlight">&lt;button&gt;</span> tag is <strong>required</strong>.</p>
-    <p>A button may also be used to submit or reset a form. In this case use the <span class="highlight">&lt;button&gt;</span> tag with <span class="highlight">type=submit</span> or <span class="highlight">type=reset</span> respectively. Use of the <span class="highlight">&lt;input&gt;</span> tag is not currently supported.</p>
-    <p>Finally, a link may be styled to <em>look</em> like a button. We call this a fake button. In this case the <span class="highlight">&lt;a&gt;</span> tag is <strong>required</strong> with a valid HREF attribute.</p>
+    <p>A button is typically used to trigger a JavaScript action (e.g. fetch results, open a dialog or expand a menu).
+        In this case, the <span class="highlight">&lt;button&gt;</span> tag is <strong>required</strong>.</p>
+    <p>A button may also be used to submit or reset a form. In this case use the <span
+            class="highlight">&lt;button&gt;</span> tag with <span class="highlight">type=submit</span> or <span
+            class="highlight">type=reset</span> respectively. Use of the <span class="highlight">&lt;input&gt;</span>
+        tag is not currently supported.</p>
+    <p>Finally, a link may be styled to <em>look</em> like a button. We call this a fake button. In this case the <span
+            class="highlight">&lt;a&gt;</span> tag is <strong>required</strong> with a valid HREF attribute.</p>
 
     <h3 id="button-raw">Raw Button</h3>
-    <p>Use the raw button as the base to build custom modifiers. The raw button does not define any styles for states such as disabled, invalid, readonly, etc.</p>
+    <p>Use the raw button as the base to build custom modifiers. The raw button does not define any styles for states
+        such as disabled, invalid, readonly, etc.</p>
     <div class="demo">
         <div class="demo__inner">
             <button class="btn">Button</button>
             <a class="fake-btn" href="http://www.ebay.com">Link</a>
         </div>
         {% highlight html %}
-<button class="btn">Button</button>
-<a class="fake-btn" href="http://www.ebay.com">Link</a>
+        <button class="btn">Button</button>
+        <a class="fake-btn" href="http://www.ebay.com">Link</a>
         {% endhighlight %}
     </div>
 
@@ -27,8 +33,8 @@
     </div>
 
     {% highlight html %}
-<button class="btn btn--regular">Button</button>
-<a class="fake-btn fake-btn--regular" href="http://www.ebay.com">Link</a>
+    <button class="btn btn--regular">Button</button>
+    <a class="fake-btn fake-btn--regular" href="http://www.ebay.com">Link</a>
     {% endhighlight %}
 
     <h3 id="button-primary">Primary Button</h3>
@@ -39,8 +45,8 @@
             <a class="fake-btn fake-btn--primary" href="http://www.ebay.com">Link</a>
         </div>
         {% highlight html %}
-<button class="btn btn--primary">Button</button>
-<a class="fake-btn fake-btn--primary" href="http://www.ebay.com">Link</a>
+        <button class="btn btn--primary">Button</button>
+        <a class="fake-btn fake-btn--primary" href="http://www.ebay.com">Link</a>
         {% endhighlight %}
     </div>
 
@@ -52,13 +58,14 @@
             <a class="fake-btn fake-btn--secondary" href="http://www.ebay.com">Link</a>
         </div>
         {% highlight html %}
-<button class="btn btn--secondary">Button</button>
-<a class="fake-btn fake-btn--secondary" href="http://www.ebay.com">Link</a>
+        <button class="btn btn--secondary">Button</button>
+        <a class="fake-btn fake-btn--secondary" href="http://www.ebay.com">Link</a>
         {% endhighlight %}
     </div>
 
     <h3 id="button-disabled">Disabled Button</h3>
-    <p>The <span class="highlight">disabled</span> attribute is <strong>required</strong> to fully disable a button tag.</p>
+    <p>The <span class="highlight">disabled</span> attribute is <strong>required</strong> to fully disable a button tag.
+    </p>
     <div class="demo">
         <div class="demo__inner">
             <button class="btn btn--primary" type="button" disabled>Primary Button</button>
@@ -67,8 +74,8 @@
     </div>
 
     {% highlight html %}
-<button class="btn btn--primary" type="button" disabled>Primary Button</button>
-<button class="btn btn--secondary" type="button" disabled>Secondary Button</button>
+    <button class="btn btn--primary" type="button" disabled>Primary Button</button>
+    <button class="btn btn--secondary" type="button" disabled>Secondary Button</button>
     {% endhighlight %}
 
     <p>Remove the <span class="highlight">href</span> attribute to fully disable an anchor tag.</p>
@@ -79,14 +86,17 @@
         </div>
     </div>
     {% highlight html %}
-<a class="fake-btn fake-btn--primary">Primary Link</a>
-<a class="fake-btn fake-btn--secondary">Secondary Link</a>
+    <a class="fake-btn fake-btn--primary">Primary Link</a>
+    <a class="fake-btn fake-btn--secondary">Secondary Link</a>
     {% endhighlight %}
 
     <h3 id="button-partially-disabled">Partially Disabled Button</h3>
     <p>Partially disabled buttons are visually and aurally identifiable as disabled, but remain keyboard focusable.</p>
-    <p>Partially disabled buttons can vastly simplify keyboard focus management logic in situations where the button may frequently toggle back and forth between enabled and disabled (e.g. pagination or carousel 'bookend' buttons).</p>
-    <p>The <span class="highlight">aria-disabled</span> state is <strong>required</strong> for partially disabled buttons.</p>
+    <p>Partially disabled buttons can vastly simplify keyboard focus management logic in situations where the button may
+        frequently toggle back and forth between enabled and disabled (e.g. pagination or carousel 'bookend' buttons).
+    </p>
+    <p>The <span class="highlight">aria-disabled</span> state is <strong>required</strong> for partially disabled
+        buttons.</p>
     <div class="demo">
         <div class="demo__inner">
             <button aria-disabled="true" class="btn btn--primary" type="button">Prev</button>
@@ -95,8 +105,8 @@
     </div>
 
     {% highlight html %}
-<button aria-disabled="true" class="btn btn--primary" type="button">Prev</button>
-<button aria-disabled="true" class="btn btn--primary" type="button">Next</button>
+    <button aria-disabled="true" class="btn btn--primary" type="button">Prev</button>
+    <button aria-disabled="true" class="btn btn--primary" type="button">Next</button>
     {% endhighlight %}
 
     <h3 id="button-fluid">Fluid Button</h3>
@@ -108,7 +118,7 @@
     </div>
 
     {% highlight html %}
-<button class="btn btn--primary btn--fluid" type="button">Button</button>
+    <button class="btn btn--primary btn--fluid" type="button">Button</button>
     {% endhighlight %}
 
     {% if page.ds == 4 %}
@@ -121,7 +131,7 @@
             <button class="btn btn--primary btn--small">Button</button>
         </div>
         {% highlight html %}
-<button class="btn btn--primary btn--small">Button</button>
+        <button class="btn btn--primary btn--small">Button</button>
         {% endhighlight %}
     </div>
 
@@ -137,7 +147,7 @@
     </div>
 
     {% highlight html %}
-<button class="btn btn--primary btn--large" type="button">Button</button>
+    <button class="btn btn--primary btn--large" type="button">Button</button>
     {% endhighlight %}
 
     {% if page.ds == 4 %}
@@ -152,7 +162,7 @@
     </div>
 
     {% highlight html %}
-<button class="btn btn--primary btn--extra-large" type="button">Button</button>
+    <button class="btn btn--primary btn--extra-large" type="button">Button</button>
     {% endhighlight %}
 
     {% endif %}
@@ -171,14 +181,14 @@
             </button>
         </div>
         {% highlight html %}
-<button class="btn btn--primary">
-    <span class="btn__cell">
-        <svg aria-hidden="true" class="btn__icon" focusable="false" height="16" width="16">
-            <use xlink:href="#icon-menu"></use>
-        </svg>
-        <span>Button</span>
-    </span>
-</button>
+        <button class="btn btn--primary">
+            <span class="btn__cell">
+                <svg aria-hidden="true" class="btn__icon" focusable="false" height="16" width="16">
+                    <use xlink:href="#icon-menu"></use>
+                </svg>
+                <span>Button</span>
+            </span>
+        </button>
         {% endhighlight %}
     </div>
 
@@ -196,18 +206,19 @@
             </button>
         </div>
         {% highlight html %}
-<button class="btn btn--primary">
-    <span class="btn__cell">
-        <span>Button</span>
-        <svg aria-hidden="true" class="btn__icon" focusable="false" height="16" width="16">
-            <use xlink:href="#icon-menu"></use>
-        </svg>
-    </span>
-</button>
+        <button class="btn btn--primary">
+            <span class="btn__cell">
+                <span>Button</span>
+                <svg aria-hidden="true" class="btn__icon" focusable="false" height="16" width="16">
+                    <use xlink:href="#icon-menu"></use>
+                </svg>
+            </span>
+        </button>
         {% endhighlight %}
     </div>
 
-    <p>Because the button cell uses flex box layout, it is fairly trivial to achieve alternate layouts, as in the example below.</p>
+    <p>Because the button cell uses flex box layout, it is fairly trivial to achieve alternate layouts, as in the
+        example below.</p>
 
     <div class="demo">
         <div class="demo__inner">
@@ -226,17 +237,17 @@
     </div>
 
     {% highlight html %}
-<button class="btn btn--primary btn--fluid" type="button" style="padding-left: 16px; padding-right: 16px;">
-    <span class="btn__cell" style="justify-content: space-between">
-        <span>Select</span>
-        <span style="display: inline-flex;">
-            <span>Any</span>
-            <svg aria-hidden="true" class="btn__icon" focusable="false" width="8" height="8">
-                <use xlink:href="#icon-chevron-down"></use>
-            </svg>
+    <button class="btn btn--primary btn--fluid" type="button" style="padding-left: 16px; padding-right: 16px;">
+        <span class="btn__cell" style="justify-content: space-between">
+            <span>Select</span>
+            <span style="display: inline-flex;">
+                <span>Any</span>
+                <svg aria-hidden="true" class="btn__icon" focusable="false" width="8" height="8">
+                    <use xlink:href="#icon-chevron-down"></use>
+                </svg>
+            </span>
         </span>
-    </span>
-</button>
+    </button>
     {% endhighlight %}
 
     <h3 id="button-wrapping">Button wrapping and overflow behavior</h3>
@@ -249,16 +260,17 @@
                 Button with a lot of text that will wrap
             </button>
         </div>
-    {% highlight html %}
-<div style="max-width 200px;">
-    <button class="btn">
-        Button with a lot of text that will wrap
-    </button>
-</div>
-    {% endhighlight %}
+        {% highlight html %}
+        <div style="max-width: 200px;">
+            <button class="btn">
+                Button with a lot of text that will wrap
+            </button>
+        </div>
+        {% endhighlight %}
     </div>
 
-    <p>To apply a fixed height to a button use the following pattern: <span class="highlight">btn--medium-fixed-height</span>.</p>
+    <p>To apply a fixed height to a button use the following pattern: <span
+            class="highlight">btn--medium-fixed-height</span>.</p>
 
     <div class="demo">
         <div class="demo__inner" style="max-width: 200px;">
@@ -266,13 +278,13 @@
                 Button with a lot of text that will wrap
             </button>
         </div>
-    {% highlight html %}
-<div style="max-width 200px;">
-    <button class="btn btn--medium-fixed-height">
-        Button with a lot of text that will wrap
-    </button>
-</div>
-    {% endhighlight %}
+        {% highlight html %}
+        <div style="max-width: 200px;">
+            <button class="btn btn--medium-fixed-height">
+                Button with a lot of text that will wrap
+            </button>
+        </div>
+        {% endhighlight %}
     </div>
 
     <div class="demo">
@@ -281,11 +293,11 @@
                 Button with a lot of text that won't wrap
             </button>
         </div>
-    {% highlight html %}
-<button class="btn btn--medium-fixed-height">
-    Button with a lot of text that won't wrap
-</button>
-    {% endhighlight %}
+        {% highlight html %}
+        <button class="btn btn--medium-fixed-height">
+            Button with a lot of text that won't wrap
+        </button>
+        {% endhighlight %}
     </div>
 
     <p>To apply truncation to text use the following pattern: <span class="highlight">btn--medium-truncated</span>.</p>
@@ -296,18 +308,21 @@
                 Button with a lot of text that will wrap
             </button>
         </div>
-    {% highlight html %}
-<div style="max-width 200px;">
-    <button class="btn btn--medium-truncated">
-        Button with a lot of text that will wrap
-    </button>
-</div>
-    {% endhighlight %}
+        {% highlight html %}
+        <div style="max-width: 200px;">
+            <button class="btn btn--medium-truncated">
+                Button with a lot of text that will wrap
+            </button>
+        </div>
+        {% endhighlight %}
     </div>
 
     <h3 id="button-pill">Pill Button</h3>
 
-    <p>Use the <span class="highlight">pill</span> modifier to create a button styled as a pill. It should be used in conjunction with primary/secondary modifiers for full styling. Note that the pill only supports one size, so it should not be used together with sizing modifiers. Additionally, JavaScript should be used for multi-line ellipsis truncation.</p>
+    <p>Use the <span class="highlight">pill</span> modifier to create a button styled as a pill. It should be used in
+        conjunction with primary/secondary modifiers for full styling. Note that the pill only supports one size, so it
+        should not be used together with sizing modifiers. Additionally, JavaScript should be used for multi-line
+        ellipsis truncation.</p>
 
     <h4>Default Pill</h4>
     <div class="demo">
@@ -315,22 +330,24 @@
             <button class="btn btn--pill">Button</button>
             <a class="fake-btn fake-btn--pill" href="http://www.ebay.com">Link</a>
         </div>
-    {% highlight html %}
-<button class="btn btn--pill">Button</button>
-<a class="fake-btn fake-btn--pill" href="http://www.ebay.com">Link</a>
-    {% endhighlight %}
+        {% highlight html %}
+        <button class="btn btn--pill">Button</button>
+        <a class="fake-btn fake-btn--pill" href="http://www.ebay.com">Link</a>
+        {% endhighlight %}
     </div>
 
     <h4>Selected Pill</h4>
     <div class="demo">
         <div class="demo__inner">
             <button class="btn btn--primary btn--pill" aria-pressed="true">Button</button>
-            <a class="fake-btn fake-btn--primary fake-btn--pill" href="http://www.ebay.com">Link<span class="clipped"> - Selected</span></a>
+            <a class="fake-btn fake-btn--primary fake-btn--pill" href="http://www.ebay.com">Link<span class="clipped"> -
+                    Selected</span></a>
         </div>
-    {% highlight html %}
-<button class="btn btn--primary btn--pill" aria-pressed="true">Button</button>
-<a class="fake-btn fake-btn--primary fake-btn--pill" href="http://www.ebay.com">Link<span class="clipped"> - Selected</span></a>
-    {% endhighlight %}
+        {% highlight html %}
+        <button class="btn btn--primary btn--pill" aria-pressed="true">Button</button>
+        <a class="fake-btn fake-btn--primary fake-btn--pill" href="http://www.ebay.com">Link<span class="clipped"> -
+                Selected</span></a>
+        {% endhighlight %}
     </div>
 
     <h4>Unselected Pill</h4>
@@ -339,30 +356,35 @@
             <button class="btn btn--secondary btn--pill">Button</button>
             <a class="fake-btn fake-btn--secondary fake-btn--pill" href="http://www.ebay.com">Link</a>
         </div>
-    {% highlight html %}
-<button class="btn btn--secondary btn--pill">Button</button>
-<a class="fake-btn fake-btn--secondary fake-btn--pill" href="http://www.ebay.com">Link</a>
-    {% endhighlight %}
+        {% highlight html %}
+        <button class="btn btn--secondary btn--pill">Button</button>
+        <a class="fake-btn fake-btn--secondary fake-btn--pill" href="http://www.ebay.com">Link</a>
+        {% endhighlight %}
     </div>
 
     <h4>Multiline Pill</h4>
     <div class="demo">
         <div class="demo__inner">
             <button class="btn btn--secondary btn--pill">Button with two lines of text</button>
-            <a class="fake-btn fake-btn--secondary fake-btn--pill" href="http://www.ebay.com">Link with two lines of text</a>
+            <a class="fake-btn fake-btn--secondary fake-btn--pill" href="http://www.ebay.com">Link with two lines of
+                text</a>
         </div>
-    {% highlight html %}
-<button class="btn btn--secondary btn--pill">Button with two lines of text</button>
-<a class="fake-btn fake-btn--secondary fake-btn--pill" href="http://www.ebay.com">Link with two lines of text</a>
-    {% endhighlight %}
+        {% highlight html %}
+        <button class="btn btn--secondary btn--pill">Button with two lines of text</button>
+        <a class="fake-btn fake-btn--secondary fake-btn--pill" href="http://www.ebay.com">Link with two lines of
+            text</a>
+        {% endhighlight %}
     </div>
 
-    <p><b>Note:</b> Adding a <span class="highlight">btn--medium-truncated</span> class (or similar classes) to the pill has undesired results.
-        A better solution is to truncate the text with JavaScript while adding the necessary accessibility attributes to satisfy
+    <p><b>Note:</b> Adding a <span class="highlight">btn--medium-truncated</span> class (or similar classes) to the pill
+        has undesired results.
+        A better solution is to truncate the text with JavaScript while adding the necessary accessibility attributes to
+        satisfy
         accessibility requirements.</p>
 
     <h3 id="button-expand">Expand Button</h3>
-    <p>Use the <span class="highlight">expand-btn</span> base class on a button that expands (and collapses) content.</p>
+    <p>Use the <span class="highlight">expand-btn</span> base class on a button that expands (and collapses) content.
+    </p>
     <div class="demo">
         <div class="demo__inner">
             <button aria-expanded="false" class="expand-btn expand-btn--primary expand-btn-example" type="button">
@@ -373,12 +395,12 @@
             </button>
         </div>
         {% highlight html %}
-<button aria-expanded="false" class="expand-btn expand-btn--primary" type="button">
-    <span class="expand-btn__cell">
-        <span>Expand</span>
-        <span class="expand-btn__icon"></span>
-    </span>
-</button>
+        <button aria-expanded="false" class="expand-btn expand-btn--primary" type="button">
+            <span class="expand-btn__cell">
+                <span>Expand</span>
+                <span class="expand-btn__icon"></span>
+            </span>
+        </button>
         {% endhighlight %}
     </div>
 
@@ -386,14 +408,16 @@
 
     <div class="demo">
         <div class="demo__inner">
-            <button aria-expanded="false" class="expand-btn expand-btn--primary expand-btn--no-text expand-btn-example" aria-label="Expand/Collapse">
+            <button aria-expanded="false" class="expand-btn expand-btn--primary expand-btn--no-text expand-btn-example"
+                aria-label="Expand/Collapse">
                 <span class="expand-btn__icon"></span>
             </button>
         </div>
         {% highlight html %}
-<button aria-expanded="false" class="expand-btn expand-btn--primary expand-btn--no-text" aria-label="Expand/Collapse">
-    <span class="expand-btn__icon"></span>
-</button>
+        <button aria-expanded="false" class="expand-btn expand-btn--primary expand-btn--no-text"
+            aria-label="Expand/Collapse">
+            <span class="expand-btn__icon"></span>
+        </button>
         {% endhighlight %}
     </div>
 
@@ -414,14 +438,14 @@
             </a>
         </div>
         {% highlight html %}
-<a class="cta-btn" href="http://www.ebay.com">
-    <span class="cta-btn__cell">
-        <span>Link</span>
-        <svg aria-hidden="true" class="cta-btn__icon" focusable="false" height="8" width="8">
-            <use xlink:href="#icon-arrow-right-bold"></use>
-        </svg>
-    </span>
-</a>
+        <a class="cta-btn" href="http://www.ebay.com">
+            <span class="cta-btn__cell">
+                <span>Link</span>
+                <svg aria-hidden="true" class="cta-btn__icon" focusable="false" height="8" width="8">
+                    <use xlink:href="#icon-arrow-right-bold"></use>
+                </svg>
+            </span>
+        </a>
         {% endhighlight %}
     </div>
 
@@ -442,14 +466,14 @@
             </a>
         </div>
         {% highlight html %}
-<a class="cta-btn cta-btn--b4" href="http://www.ebay.com">
-    <span class="fake-btn__cell">
-        <span>Link</span>
-        <svg aria-hidden="true" class="cta-btn__icon" focusable="false" height="8" width="8">
-            <use xlink:href="#icon-arrow-right-bold"></use>
-        </svg>
-    </span>
-</a>
+        <a class="cta-btn cta-btn--b4" href="http://www.ebay.com">
+            <span class="fake-btn__cell">
+                <span>Link</span>
+                <svg aria-hidden="true" class="cta-btn__icon" focusable="false" height="8" width="8">
+                    <use xlink:href="#icon-arrow-right-bold"></use>
+                </svg>
+            </span>
+        </a>
         {% endhighlight %}
     </div>
 
@@ -467,14 +491,14 @@
             </a>
         </div>
         {% highlight html %}
-<a class="cta-btn cta-btn--r4" href="http://www.ebay.com">
-    <span class="cta-btn__cell">
-        <span>Link</span>
-        <svg aria-hidden="true" class="cta-btn__icon" focusable="false" height="8" width="8">
-            <use xlink:href="#icon-arrow-right-bold"></use>
-        </svg>
-    </span>
-</a>
+        <a class="cta-btn cta-btn--r4" href="http://www.ebay.com">
+            <span class="cta-btn__cell">
+                <span>Link</span>
+                <svg aria-hidden="true" class="cta-btn__icon" focusable="false" height="8" width="8">
+                    <use xlink:href="#icon-arrow-right-bold"></use>
+                </svg>
+            </span>
+        </a>
         {% endhighlight %}
     </div>
 
