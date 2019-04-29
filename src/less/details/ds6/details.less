@@ -2,7 +2,7 @@
 
 details:not([open]) {
     .show-less {
-        display: none
+        display: none;
     }
 }
 
@@ -11,6 +11,7 @@ details[data-makeup-open] {
     .expand-btn__icon {
         transform: rotate(180deg);
     }
+
     .show-more {
         display: none;
     }
@@ -18,6 +19,7 @@ details[data-makeup-open] {
 
 summary {
     color: @ds6-color-b4;
+
     span.expand-btn__icon {
         background-image: url('data:image/svg+xml;base64,@{ds6-icon-chevron-down-blue-base64}');
     }
