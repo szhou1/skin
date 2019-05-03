@@ -1,7 +1,17 @@
 @import "../../less/ds4/variables.less";
+@import "../../less/ds4/mixins.less";
 
-details.details[open],
-details.details[data-makeup-open] {
+details.details {
+    & svg {
+        .foreground-icon-base;
+
+        color: @ds4-color-core-blue;
+        height: 8px;
+        width: 8px;
+    }
+}
+
+details.details[open] {
     .expand-btn__icon {
         transform: rotate(180deg);
     }
@@ -16,16 +26,39 @@ details.details[data-makeup-open] {
 summary.details__summary {
     color: @ds4-color-core-blue;
 
-    .expand-btn__icon {
-        background-image: url('data:image/svg+xml;base64,@{ds4-icon-arrow-down-blue-base64}');
-    }
-
     &::before {
         content: none;
     }
 
     &.details_summary--centered {
         justify-content: center;
+    }
+    .expand-btn__icon {
+        .icon-arrow-down(8px, 8px);
+    }
+
+    @media screen and (-ms-high-contrast: white-on-black) {
+        .expand-btn__icon {
+            background-image: url('data:image/svg+xml;base64,@{ds4-icon-arrow-down-blue-base64}');
+        }
+    }
+}
+
+.expand-btn__icon {
+    // progressive enhancement - over-ride hidden SVG
+    &[hidden] {
+        display: block;
+    }
+
+    &:not([hidden]) {
+        .background-icon-base;
+    }
+
+    & svg {
+        .foreground-icon-base;
+
+        height: 8px;
+        width: 8px;
     }
 }
 

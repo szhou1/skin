@@ -74,7 +74,32 @@
         </details>
         {% endhighlight %}
     </div>
-
+    <h3>Details Summary using SVGs</h3>
+    <div class="demo">
+        <div class="demo__inner">
+            <details class="details">
+                <summary class="details__summary">
+                    <span class="details__summary--text">Details</span>
+                    <span class="expand-btn__icon" hidden>
+                        <svg aria-hidden="true" class="details__closed" focusable="false" >
+                            <use xlink:href="#icon-arrow-down"></use>
+                        </svg>
+                        <svg aria-hidden="true" class="details__open" focusable="false" >
+                            <use xlink:href="#icon-arrow-up"></use>
+                        </svg>
+                    </span>
+                </summary>
+                <p>Sample content</p>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>
+            </details>
+        </div>
+        {% highlight html %}
+        {% endhighlight %}
+    </div>
     {% if page.ds == 6 %}
     <div class="section-footer">
         <p>DS6.v1.01</p>
